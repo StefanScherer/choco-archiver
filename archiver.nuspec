@@ -28,7 +28,7 @@ Supported formats/extensions:
 
 Make a new archive:
 
-```bash
+```
 $ archiver make [archive name] [input files...]
 ```
 
@@ -36,7 +36,7 @@ $ archiver make [archive name] [input files...]
 
 To extract an archive:
 
-```bash
+```
 $ archiver open [archive name] [destination]
 ```
 
