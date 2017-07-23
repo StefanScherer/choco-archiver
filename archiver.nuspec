@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>archiver</id>
+    <version>2.0</version>
+    <title>archiver</title>
+    <authors>Matt Holt</authors>
+    <owners>Stefan Scherer</owners>
+    <summary>Easily create and extract .zip, .tar, .tar.gz, .tar.bz2, .tar.xz, .tar.lz4, .tar.sz, and .rar (extract-only) files with Go.</summary>
+    <description>Package archiver makes it trivially easy to make and extract common archive formats such as .zip, and .tar.gz. Simply name the input and output file(s).
+
+Files are put into the root of the archive; directories are recursively added, preserving structure.
+
+The `archiver` command runs the same cross-platform and has no external dependencies (not even libc); powered by the Go standard library, [dsnet/compress](https://github.com/dsnet/compress), [nwaples/rardecode](https://github.com/nwaples/rardecode), and [ulikunitz/xz](https://github.com/ulikunitz/xz). Enjoy!
+
+Supported formats/extensions:
+
+- .zip
+- .tar
+- .tar.gz and .tgz
+- .tar.bz2 and .tbz2
+- .tar.xz and .txz
+- .tar.lz4 and .tlz4
+- .tar.sz and .tsz
+- .rar (open only)
+
+## Command Use
+
+Make a new archive:
+
+```bash
+$ archiver make [archive name] [input files...]
+```
+
+(At least one input file is required.)
+
+To extract an archive:
+
+```bash
+$ archiver open [archive name] [destination]
+```
+
+(The destination path is optional; default is current directory.)
+
+The archive name must end with a supported file extension - this is how it knows what kind of archive to make. Run `archiver -h` for more help.
+    </description>
+    <projectUrl>https://github.com/mholt/archiver</projectUrl>
+    <docsUrl>https://github.com/mholt/archiver/blob/master/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/mholt/archiver/issues</bugTrackerUrl>
+    <packageSourceUrl>https://github.com/StefanScherer/choco-archiver</packageSourceUrl>
+    <tags>Archiver, tar, bz2, zip, xz, rar, lz4, extract, compress</tags>
+    <licenseUrl>https://github.com/mholt/archiver/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
