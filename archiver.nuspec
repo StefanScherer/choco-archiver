@@ -48,9 +48,10 @@ The archive name must end with a supported file extension - this is how it knows
     <docsUrl>https://github.com/mholt/archiver/blob/master/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/mholt/archiver/issues</bugTrackerUrl>
     <packageSourceUrl>https://github.com/StefanScherer/choco-archiver</packageSourceUrl>
-    <tags>Archiver, tar, bz2, zip, xz, rar, lz4, extract, compress</tags>
+    <tags>Archiver tar gz bz2 zip xz rar lz4 extract compress</tags>
     <licenseUrl>https://github.com/mholt/archiver/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <releaseNotes>https://github.com/mholt/archiver/releases</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
