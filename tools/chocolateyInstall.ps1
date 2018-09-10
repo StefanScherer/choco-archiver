@@ -1,8 +1,8 @@
 $packageName = 'archiver'
-$url = 'https://github.com/mholt/archiver/releases/download/v2.0/archiver_windows_386.exe'
-$url64 = 'https://github.com/mholt/archiver/releases/download/v2.0/archiver_windows_amd64.exe'
-$checksum = '730578a0f6dc7270825d87dd0f9e5c60bdeeafa517bc141cc15af5629ca26f0b'
-$checksum64 = 'c23eab86a8f77e446f2b5dbb03305ac9acfb5187108a0090a4bcb3d908fa9785'
+$url = 'https://github.com/mholt/archiver/releases/download/v2.1/archiver_windows_386.exe'
+$url64 = 'https://github.com/mholt/archiver/releases/download/v2.1/archiver_windows_amd64.exe'
+$checksum = '0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5'
+$checksum64 = '0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5'
 $checksumType = 'sha256'
 $checksumType64 = $checksumType
 
