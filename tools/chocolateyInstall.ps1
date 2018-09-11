@@ -1,8 +1,8 @@
 $packageName = 'archiver'
-$url = 'https://github.com/mholt/archiver/releases/download/v2.0/archiver_windows_386.exe'
-$url64 = 'https://github.com/mholt/archiver/releases/download/v2.0/archiver_windows_amd64.exe'
-$checksum = '730578a0f6dc7270825d87dd0f9e5c60bdeeafa517bc141cc15af5629ca26f0b'
-$checksum64 = 'c23eab86a8f77e446f2b5dbb03305ac9acfb5187108a0090a4bcb3d908fa9785'
+$url = 'https://github.com/mholt/archiver/releases/download/v2.1/archiver_windows_386.exe'
+$url64 = 'https://github.com/mholt/archiver/releases/download/v2.1/archiver_windows_amd64.exe'
+$checksum = 'a826769480e309adb2578d2dd19930dee2e7a9ecf52f9760df8af11430f4052a'
+$checksum64 = 'a9e91b3adef6f89e6eb3d846ac5d49b78e0c28d8ef446392c37c26b8ec4fcfd2'
 $checksumType = 'sha256'
 $checksumType64 = $checksumType
 
@@ -11,4 +11,12 @@ $file = "$($destination)\archiver.exe"
 
 if (![System.IO.Directory]::Exists($destination)) {[System.IO.Directory]::CreateDirectory($destination)}
 
-Get-ChocolateyWebFile $packageName $file $url $url64 $checksum $checksum64 $checksumType $checksumType64
+Get-ChocolateyWebFile `
+  -PackageName    $packageName `
+  -FileFullPath   $file `
+  -Url            $url `
+  -Url64bit       $url64 `
+  -Checksum       $checksum `
+  -Checksum64     $checksum64 `
+  -ChecksumType   $checksumType `
+  -ChecksumType64 $checksumType64

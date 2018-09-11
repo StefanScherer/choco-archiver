@@ -26,13 +26,22 @@ $zip.Dispose()
 "TEST: Installation of package should work"
 . choco install -y archiver -source .
 
+"TEST: Archiver binary is in path"
+$path = $(cmd /c where archiver.exe)
+Write-Output "path = $path"
+if ($path -eq "C:\ProgramData\chocolatey\bin\archiver.exe") {
+  Write-Host "PASS: archiver binary found"
+} else {
+  Write-Error "FAIL: archiver binary not found"
+}
+
 "TEST: Uninstall show remove the binary"
 . choco uninstall archiver
 try {
   . archiver
   Write-Error "FAIL: archiver binary still found"
 } catch {
-  Write-Host "PASS: archiver not found"
+  Write-Host "PASS: archiver binary not found"
 }
 
 "TEST: Finished"
