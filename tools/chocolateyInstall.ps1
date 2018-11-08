@@ -1,13 +1,13 @@
 $packageName = 'archiver'
-$url = 'https://github.com/mholt/archiver/releases/download/v2.1/archiver_windows_386.exe'
-$url64 = 'https://github.com/mholt/archiver/releases/download/v2.1/archiver_windows_amd64.exe'
-$checksum = 'a826769480e309adb2578d2dd19930dee2e7a9ecf52f9760df8af11430f4052a'
-$checksum64 = 'a9e91b3adef6f89e6eb3d846ac5d49b78e0c28d8ef446392c37c26b8ec4fcfd2'
+$url = 'https://github.com/mholt/archiver/releases/download/v3.0.0/arc_windows_386.exe'
+$url64 = 'https://github.com/mholt/archiver/releases/download/v3.0.0/arc_windows_amd64.exe'
+$checksum = '1db22614f241c87426c4d6a505582cbd95f4ca249efc86aaf3039471d83fec4c'
+$checksum64 = '1db22614f241c87426c4d6a505582cbd95f4ca249efc86aaf3039471d83fec4c'
 $checksumType = 'sha256'
 $checksumType64 = $checksumType
 
 $destination = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$file = "$($destination)\archiver.exe"
+$file = "$($destination)\arc.exe"
 
 if (![System.IO.Directory]::Exists($destination)) {[System.IO.Directory]::CreateDirectory($destination)}
 
