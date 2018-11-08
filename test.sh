@@ -1,11 +1,9 @@
 #!/bin/bash
-# Build and test the docker NuGet package in a Windows container
+# Build and test the chocolatey package in a Windows container
 
 docker build -t chocolatey - <<EOF
 FROM microsoft/windowsservercore
-
 ENV chocolateyUseWindowsCompression false
-
 RUN powershell -Command \
     iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'));
 EOF

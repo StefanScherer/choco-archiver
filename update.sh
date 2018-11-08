@@ -14,8 +14,8 @@ fi
 
 version=$1
 
-url="https://github.com/mholt/archiver/releases/download/v${version}/archiver_windows_386.exe"
-url64="https://github.com/mholt/archiver/releases/download/v${version}/archiver_windows_amd64.exe"
+url="https://github.com/mholt/archiver/releases/download/v${version}/arc_windows_386.exe"
+url64="https://github.com/mholt/archiver/releases/download/v${version}/arc_windows_amd64.exe"
 
 checksum=$(curl -L "${url}" | shasum -a 256 - | cut -f 1 -d " ")
 checksum64=$(curl -L "${url64}" | shasum -a 256 - | cut -f 1 -d " ")
