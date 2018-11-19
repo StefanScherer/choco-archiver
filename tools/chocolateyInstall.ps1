@@ -1,10 +1,7 @@
 $packageName = 'archiver'
-$url = 'https://github.com/mholt/archiver/releases/download/v3.0.0/arc_windows_386.exe'
-$url64 = 'https://github.com/mholt/archiver/releases/download/v3.0.0/arc_windows_amd64.exe'
-$checksum = '1db22614f241c87426c4d6a505582cbd95f4ca249efc86aaf3039471d83fec4c'
-$checksum64 = '1db22614f241c87426c4d6a505582cbd95f4ca249efc86aaf3039471d83fec4c'
-$checksumType = 'sha256'
-$checksumType64 = $checksumType
+$url64 = 'https://github.com/mholt/archiver/releases/download/v3.1.0/arc_windows_amd64.exe'
+$checksum64 = 'c9a388a66d7f87cbdb1ca42d08721c4f894e6028fe3250e66a0100cdb7e5205d'
+$checksumType64 = 'sha256'
 
 $destination = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $file = "$($destination)\arc.exe"
@@ -14,9 +11,9 @@ if (![System.IO.Directory]::Exists($destination)) {[System.IO.Directory]::Create
 Get-ChocolateyWebFile `
   -PackageName    $packageName `
   -FileFullPath   $file `
-  -Url            $url `
+  -Url            $url64 `
   -Url64bit       $url64 `
-  -Checksum       $checksum `
+  -Checksum       $checksum64 `
   -Checksum64     $checksum64 `
-  -ChecksumType   $checksumType `
+  -ChecksumType   $checksumType64 `
   -ChecksumType64 $checksumType64
