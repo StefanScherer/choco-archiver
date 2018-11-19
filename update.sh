@@ -17,8 +17,7 @@ version=$1
 url="https://github.com/mholt/archiver/releases/download/v${version}/arc_windows_386.exe"
 url64="https://github.com/mholt/archiver/releases/download/v${version}/arc_windows_amd64.exe"
 
-checksum=$(curl -L "${url}" | shasum -a 256 - | cut -f 1 -d " ")
-checksum64=$(curl -L "${url64}" | shasum -a 256 - | cut -f 1 -d " ")
+checksum64=$(curl --fail -L "${url64}" | shasum -a 256 - | cut -f 1 -d " ")
 
 sed -i.bak "s/<version>.*<\/version>/<version>${version}<\/version>/" archiver.nuspec
 
@@ -26,5 +25,4 @@ sed -i.bak "s/version: .*{build}/version: ${version}.{build}/" appveyor.yml
 
 sed -i.bak "s!^\$url = '.*'!\$url = '${url}'!" tools/chocolateyInstall.ps1
 sed -i.bak "s!^\$url64 = '.*'!\$url64 = '${url64}'!" tools/chocolateyInstall.ps1
-sed -i.bak "s/^\$checksum = '.*'/\$checksum = '${checksum}'/" tools/chocolateyInstall.ps1
 sed -i.bak "s/^\$checksum64 = '.*'/\$checksum64 = '${checksum64}'/" tools/chocolateyInstall.ps1
